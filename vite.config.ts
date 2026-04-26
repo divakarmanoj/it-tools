@@ -109,6 +109,11 @@ export default defineConfig({
   },
   test: {
     exclude: [...configDefaults.exclude, '**/*.e2e.spec.ts'],
+    server: {
+      deps: {
+        inline: ['iarna-toml-esm'],
+      },
+    },
   },
   build: {
     target: 'esnext',
