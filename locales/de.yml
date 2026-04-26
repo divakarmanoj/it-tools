@@ -92,11 +92,6 @@ tools:
     measurement: Messung
     text: Text
     data: Daten
-  password-strength-analyser:
-    title: Passwortstärken-Analysator
-    description: >-
-      Ermittle die Stärke deines Passworts mit diesem Client-seitigen
-      Passwortstärken-Analysator und Tool zur Schätzung der Knackzeit.
   chronometer:
     title: Chronometer
     description: >-
@@ -454,3 +449,35 @@ tools:
   text-to-binary:
     title: Text zu ASCII-Binär
     description: Konvertiere Text in seine ASCII-Binärrepräsentation und umgekehrt.
+
+  data-converter:
+    title: Datenformat-Konverter
+    description: Konvertiere strukturierte Daten zwischen JSON, YAML, TOML, XML und CSV in beide Richtungen.
+
+  argon2-hash-generator:
+    title: Argon2 Hash & Verifikation
+    description: Hashe Passwörter mit Argon2id / Argon2i / Argon2d und verifiziere bestehende PHC-kodierte Hashes — vollständig in deinem Browser.
+
+  pgp-key-generator:
+    title: PGP-Schlüsselpaar, Verschlüsseln & Entschlüsseln
+    description: Erzeuge ein OpenPGP-Schlüsselpaar (Curve25519 oder RSA) und verschlüssele oder entschlüssele Nachrichten — alles clientseitig via OpenPGP.js.
+
+  totp-secret-generator:
+    title: TOTP / HOTP Secret + QR-Generator
+    description: Generiere ein base32-TOTP/HOTP-Secret und einen scanbaren QR-Code mit allen Provisionierungsparametern (Issuer, Konto, Algorithmus, Stellen, Periode oder Zähler).
+
+  diceware-passphrase-generator:
+    title: Diceware-Passphrasengenerator
+    description: Erzeuge starke, einprägsame Passphrasen aus der EFF-Wortliste (7.776 Wörter ≈ 12,92 Bit pro Wort) mit kryptografisch sicherer Zufälligkeit.
+
+  age-encryption:
+    title: age-Verschlüsselung (Verschlüsseln & Entschlüsseln)
+    description: Verschlüssele und entschlüssele Nachrichten im modernen age-Format mit X25519-Empfängern/Identitäten oder einer Passphrase.
+
+  csr-generator:
+    title: Certificate Signing Request (CSR) Generator
+    description: Erzeuge eine PKCS#10 Certificate-Signing-Request samt RSA-Privatschlüssel mit voller Subject- und SAN-Unterstützung.
+
+  password-entropy-visualizer:
+    title: Passwort-Entropie-Visualisierer
+    description: Visualisiere die Zeichenzusammensetzung eines Passworts, die gesamte Entropie in Bits und die geschätzte Knackzeit für mehrere Angreiferprofile.

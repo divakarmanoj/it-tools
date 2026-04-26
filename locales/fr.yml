@@ -80,3 +80,35 @@ tools:
     copied: Le token a été copié
     length: Longueur
     tokenPlaceholder: Le token...
+
+  data-converter:
+    title: Data format converter
+    description: Convert structured data between JSON, YAML, TOML, XML, and CSV in any direction.
+
+  argon2-hash-generator:
+    title: Argon2 hash & verify
+    description: Hash passwords with Argon2id / Argon2i / Argon2d and verify existing PHC-encoded hashes — entirely in your browser.
+
+  pgp-key-generator:
+    title: PGP keypair, encrypt & decrypt
+    description: Generate an OpenPGP keypair (Curve25519 or RSA) and encrypt or decrypt messages — all client-side via OpenPGP.js.
+
+  totp-secret-generator:
+    title: TOTP / HOTP secret + QR generator
+    description: Generate a base32 TOTP/HOTP secret and a scannable QR code with full provisioning parameters (issuer, account, algorithm, digits, period or counter).
+
+  diceware-passphrase-generator:
+    title: Diceware passphrase generator
+    description: Generate strong, memorable passphrases from the EFF large wordlist (7,776 words ≈ 12.92 bits per word) using cryptographically secure randomness.
+
+  age-encryption:
+    title: age encryption (encrypt & decrypt)
+    description: Encrypt and decrypt messages using the modern age encryption format with X25519 recipients/identities or a passphrase.
+
+  csr-generator:
+    title: Certificate Signing Request (CSR) generator
+    description: Generate a PKCS#10 Certificate Signing Request and matching RSA private key with full subject and SAN support.
+
+  password-entropy-visualizer:
+    title: Password entropy visualizer
+    description: Visualize a password's character composition, total entropy bits, and estimated time to crack across multiple attacker profiles.

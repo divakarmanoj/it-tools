@@ -71,10 +71,6 @@ tools:
     text: '文本'
     data: '数据'
 
-  password-strength-analyser:
-    title: 密码强度分析仪
-    description: 使用此密码强度分析器和破解时间估计工具来发现密码的强度。
-
   chronometer:
     title: 计时器
     description: 监控事物的持续时间。基本上是一种具有简单计时器功能的计时器。
@@ -388,3 +384,35 @@ tools:
   text-to-binary:
     title: 文本到 ASCII 二进制
     description: 将文本转换为其 ASCII 二进制表示形式，反之亦然。
+
+  data-converter:
+    title: 数据格式转换器
+    description: 在 JSON、YAML、TOML、XML 和 CSV 之间双向转换结构化数据。
+
+  argon2-hash-generator:
+    title: Argon2 哈希与验证
+    description: 使用 Argon2id / Argon2i / Argon2d 哈希密码，并验证已有的 PHC 编码哈希——完全在浏览器中完成。
+
+  pgp-key-generator:
+    title: PGP 密钥对、加密与解密
+    description: 生成 OpenPGP 密钥对（Curve25519 或 RSA）并加密或解密消息——全部通过 OpenPGP.js 在客户端完成。
+
+  totp-secret-generator:
+    title: TOTP / HOTP 密钥 + 二维码生成器
+    description: 生成 base32 编码的 TOTP/HOTP 密钥及可扫描的二维码，支持完整的配置参数（发行方、账户、算法、位数、周期或计数器）。
+
+  diceware-passphrase-generator:
+    title: Diceware 短语密码生成器
+    description: 使用 EFF 大词表（7,776 个词 ≈ 每个词 12.92 位熵）通过密码学安全的随机源生成强且易记的短语密码。
+
+  age-encryption:
+    title: age 加密（加密与解密）
+    description: 使用现代的 age 加密格式，通过 X25519 收件人/身份或口令对消息进行加密和解密。
+
+  csr-generator:
+    title: 证书签名请求（CSR）生成器
+    description: 生成 PKCS#10 证书签名请求及匹配的 RSA 私钥，全面支持主题字段与 SAN。
+
+  password-entropy-visualizer:
+    title: 密码熵可视化
+    description: 可视化密码的字符组成、总熵位数以及在多种攻击者模型下的估计破解时间。

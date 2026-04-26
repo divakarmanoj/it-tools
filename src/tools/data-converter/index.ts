@@ -1,10 +1,11 @@
 import { ArrowsLeftRight } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Data format converter',
+  name: translate('tools.data-converter.title'),
   path: '/data-converter',
-  description: 'Convert structured data between JSON, YAML, TOML, XML, and CSV in any direction.',
+  description: translate('tools.data-converter.description'),
   keywords: ['data', 'converter', 'json', 'yaml', 'toml', 'xml', 'csv', 'format', 'transform'],
   component: () => import('./data-converter.tool.vue'),
   icon: ArrowsLeftRight,

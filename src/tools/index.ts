@@ -20,7 +20,6 @@ import { tool as ibanValidatorAndParser } from './iban-validator-and-parser';
 import { tool as stringObfuscator } from './string-obfuscator';
 import { tool as textDiff } from './text-diff';
 import { tool as emojiPicker } from './emoji-picker';
-import { tool as passwordStrengthAnalyser } from './password-strength-analyser';
 import { tool as cameraRecorder } from './camera-recorder';
 import { tool as listConverter } from './list-converter';
 import { tool as phoneParserAndFormatter } from './phone-parser-and-formatter';
@@ -39,8 +38,15 @@ import { tool as textToNatoAlphabet } from './text-to-nato-alphabet';
 import { tool as slugifyString } from './slugify-string';
 import { tool as keycodeInfo } from './keycode-info';
 import { tool as jsonMinify } from './json-minify';
+import { tool as ageEncryption } from './age-encryption';
+import { tool as argon2HashGenerator } from './argon2-hash-generator';
 import { tool as bcrypt } from './bcrypt';
 import { tool as bip39 } from './bip39-generator';
+import { tool as csrGenerator } from './csr-generator';
+import { tool as dicewarePassphraseGenerator } from './diceware-passphrase-generator';
+import { tool as passwordEntropyVisualizer } from './password-entropy-visualizer';
+import { tool as pgpKeyGenerator } from './pgp-key-generator';
+import { tool as totpSecretGenerator } from './totp-secret-generator';
 import { tool as caseConverter } from './case-converter';
 import { tool as chmodCalculator } from './chmod-calculator';
 import { tool as chronometer } from './chronometer';
@@ -83,7 +89,25 @@ import { tool as yamlViewer } from './yaml-viewer';
 export const toolsByCategory: ToolCategory[] = [
   {
     name: 'Crypto',
-    components: [tokenGenerator, hashText, bcrypt, uuidGenerator, ulidGenerator, cypher, bip39, hmacGenerator, rsaKeyPairGenerator, passwordStrengthAnalyser, pdfSignatureChecker],
+    components: [
+      tokenGenerator,
+      hashText,
+      bcrypt,
+      argon2HashGenerator,
+      uuidGenerator,
+      ulidGenerator,
+      cypher,
+      bip39,
+      hmacGenerator,
+      rsaKeyPairGenerator,
+      pgpKeyGenerator,
+      ageEncryption,
+      csrGenerator,
+      totpSecretGenerator,
+      dicewarePassphraseGenerator,
+      passwordEntropyVisualizer,
+      pdfSignatureChecker,
+    ],
   },
   {
     name: 'Converter',

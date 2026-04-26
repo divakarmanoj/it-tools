@@ -71,10 +71,6 @@ tools:
     text: Văn bản
     data: Dữ liệu
 
-  password-strength-analyser:
-    title: Bộ phân tích độ mạnh mật khẩu
-    description: Khám phá độ mạnh của mật khẩu của bạn với công cụ phân tích độ mạnh mật khẩu chỉ chạy trên phía máy khách và ước tính thời gian phá mật khẩu.
-
   chronometer:
     title: Đồng hồ bấm giờ
     description: Giám sát thời gian của một sự việc. Cơ bản là một đồng hồ bấm giờ với các tính năng đơn giản.
@@ -381,3 +377,35 @@ tools:
   text-to-binary:
     title: Chuyển đổi văn bản thành nhị phân ASCII
     description: Chuyển đổi văn bản thành biểu diễn nhị phân ASCII của nó và ngược lại.
+
+  data-converter:
+    title: Trình chuyển đổi định dạng dữ liệu
+    description: Chuyển đổi dữ liệu có cấu trúc giữa JSON, YAML, TOML, XML và CSV theo bất kỳ chiều nào.
+
+  argon2-hash-generator:
+    title: Mã hóa & xác minh Argon2
+    description: Mã hóa mật khẩu bằng Argon2id / Argon2i / Argon2d và xác minh các hash đã được mã hóa theo định dạng PHC — hoàn toàn trong trình duyệt.
+
+  pgp-key-generator:
+    title: Cặp khóa PGP, mã hóa & giải mã
+    description: Tạo cặp khóa OpenPGP (Curve25519 hoặc RSA) và mã hóa hoặc giải mã tin nhắn — tất cả phía máy khách qua OpenPGP.js.
+
+  totp-secret-generator:
+    title: Trình tạo mã bí mật + QR cho TOTP / HOTP
+    description: Tạo mã bí mật base32 cho TOTP/HOTP và mã QR có thể quét với đầy đủ tham số (issuer, tài khoản, thuật toán, số chữ số, chu kỳ hoặc bộ đếm).
+
+  diceware-passphrase-generator:
+    title: Trình tạo cụm mật khẩu Diceware
+    description: Tạo cụm mật khẩu mạnh, dễ nhớ từ bộ từ EFF Large Wordlist (7.776 từ ≈ 12,92 bit mỗi từ) bằng phương pháp ngẫu nhiên an toàn về mặt mật mã.
+
+  age-encryption:
+    title: Mã hóa age (mã hóa & giải mã)
+    description: Mã hóa và giải mã tin nhắn bằng định dạng age hiện đại với người nhận/danh tính X25519 hoặc bằng cụm mật khẩu.
+
+  csr-generator:
+    title: Trình tạo Certificate Signing Request (CSR)
+    description: Tạo Certificate Signing Request PKCS#10 cùng khóa riêng RSA tương ứng với hỗ trợ đầy đủ subject và SAN.
+
+  password-entropy-visualizer:
+    title: Trình trực quan hóa entropy của mật khẩu
+    description: Trực quan hóa thành phần ký tự của mật khẩu, tổng entropy theo bit và thời gian phá ước tính qua nhiều mô hình tấn công.

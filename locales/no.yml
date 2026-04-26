@@ -71,10 +71,6 @@ tools:
     text: Tekst
     data: Data
 
-  password-strength-analyser:
-    title: Analyseverktøy for passordstyrke
-    description: Oppdag styrken av passordet ditt med dette kun-klient-maskin passordstyrke analyse verktøyet og se den estimerte knekketiden.
-
   chronometer:
     title: Kronometer
     description: Overvåk varigheten av noe. I bunn og grunn et kronometer med enkle funksjoner.
@@ -392,3 +388,35 @@ tools:
   text-to-binary:
     title: Tekst til ASCII binært
     description: Konverter tekst til sin ASCII binære representasjon og visa-versa.
+
+  data-converter:
+    title: Dataformat-konverterer
+    description: Konverter strukturerte data mellom JSON, YAML, TOML, XML og CSV i begge retninger.
+
+  argon2-hash-generator:
+    title: Argon2 hash & verifisering
+    description: Hash passord med Argon2id / Argon2i / Argon2d og verifiser eksisterende PHC-kodede hash-verdier — helt i nettleseren din.
+
+  pgp-key-generator:
+    title: PGP nøkkelpar, krypter & dekrypter
+    description: Generer et OpenPGP-nøkkelpar (Curve25519 eller RSA) og krypter eller dekrypter meldinger — alt i nettleseren via OpenPGP.js.
+
+  totp-secret-generator:
+    title: TOTP / HOTP hemmelighet + QR-generator
+    description: Generer en base32 TOTP/HOTP-hemmelighet og en skannbar QR-kode med alle provisjoneringsparametere (utsteder, konto, algoritme, sifre, periode eller teller).
+
+  diceware-passphrase-generator:
+    title: Diceware passfrase-generator
+    description: Generer sterke, lett huskbare passfraser fra EFFs store ordliste (7 776 ord ≈ 12,92 bits per ord) med kryptografisk sikker tilfeldighet.
+
+  age-encryption:
+    title: age-kryptering (krypter & dekrypter)
+    description: Krypter og dekrypter meldinger med det moderne age-formatet ved bruk av X25519-mottakere/identiteter eller en passfrase.
+
+  csr-generator:
+    title: Certificate Signing Request (CSR) generator
+    description: Generer en PKCS#10 Certificate Signing Request og tilhørende RSA-privatnøkkel med full støtte for subjekt-felt og SAN.
+
+  password-entropy-visualizer:
+    title: Passordentropi-visualisering
+    description: Visualiser tegnsammensetningen i et passord, total entropi i bits og estimert knekketid på tvers av flere angripere.
