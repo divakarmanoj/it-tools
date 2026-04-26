@@ -75,6 +75,10 @@ tools:
     title: Data format converter
     description: Convert structured data between JSON, YAML, TOML, XML, and CSV in any direction.
 
+  json-to-types:
+    title: JSON to TypeScript / Go / Rust / Python types
+    description: Paste a JSON sample and get type definitions for TypeScript, Go, Rust, or Python — generated client-side via quicktype.
+
   argon2-hash-generator:
     title: Argon2 hash & verify
     description: Hash passwords with Argon2id / Argon2i / Argon2d and verify existing PHC-encoded hashes — entirely in your browser.

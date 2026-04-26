@@ -112,3 +112,7 @@ tools:
   password-entropy-visualizer:
     title: Password entropy visualizer
     description: Visualize a password's character composition, total entropy bits, and estimated time to crack across multiple attacker profiles.
+
+  json-to-types:
+    title: JSON to TypeScript / Go / Rust / Python types
+    description: Paste a JSON sample and get type definitions for TypeScript, Go, Rust, or Python — generated client-side via quicktype.

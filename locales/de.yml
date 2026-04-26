@@ -481,3 +481,7 @@ tools:
   password-entropy-visualizer:
     title: Passwort-Entropie-Visualisierer
     description: Visualisiere die Zeichenzusammensetzung eines Passworts, die gesamte Entropie in Bits und die geschätzte Knackzeit für mehrere Angreiferprofile.
+
+  json-to-types:
+    title: JSON zu TypeScript / Go / Rust / Python Typen
+    description: Füge ein JSON-Beispiel ein und erhalte Typdefinitionen für TypeScript, Go, Rust oder Python — clientseitig generiert mit quicktype.

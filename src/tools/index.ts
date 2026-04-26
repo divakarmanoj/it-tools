@@ -24,6 +24,7 @@ import { tool as cameraRecorder } from './camera-recorder';
 import { tool as listConverter } from './list-converter';
 import { tool as phoneParserAndFormatter } from './phone-parser-and-formatter';
 import { tool as jsonDiff } from './json-diff';
+import { tool as jsonToTypes } from './json-to-types';
 import { tool as ipv4RangeExpander } from './ipv4-range-expander';
 import { tool as httpStatusCodes } from './http-status-codes';
 import { tool as ipv6UlaGenerator } from './ipv6-ula-generator';
@@ -125,6 +126,7 @@ export const toolsByCategory: ToolCategory[] = [
       textToUnicode,
       listConverter,
       markdownToHtml,
+      jsonToTypes,
     ],
   },
   {

@@ -409,3 +409,7 @@ tools:
   password-entropy-visualizer:
     title: Trình trực quan hóa entropy của mật khẩu
     description: Trực quan hóa thành phần ký tự của mật khẩu, tổng entropy theo bit và thời gian phá ước tính qua nhiều mô hình tấn công.
+
+  json-to-types:
+    title: JSON sang kiểu TypeScript / Go / Rust / Python
+    description: Dán một mẫu JSON và nhận định nghĩa kiểu cho TypeScript, Go, Rust hoặc Python — sinh ra phía máy khách bằng quicktype.

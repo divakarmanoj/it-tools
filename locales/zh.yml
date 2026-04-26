@@ -416,3 +416,7 @@ tools:
   password-entropy-visualizer:
     title: 密码熵可视化
     description: 可视化密码的字符组成、总熵位数以及在多种攻击者模型下的估计破解时间。
+
+  json-to-types:
+    title: JSON 转 TypeScript / Go / Rust / Python 类型
+    description: 粘贴一段 JSON 样本，即可生成 TypeScript、Go、Rust 或 Python 的类型定义——全部在浏览器中通过 quicktype 完成。

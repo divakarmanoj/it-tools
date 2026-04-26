@@ -420,3 +420,7 @@ tools:
   password-entropy-visualizer:
     title: Passordentropi-visualisering
     description: Visualiser tegnsammensetningen i et passord, total entropi i bits og estimert knekketid på tvers av flere angripere.
+
+  json-to-types:
+    title: JSON til TypeScript / Go / Rust / Python typer
+    description: Lim inn et JSON-eksempel og få typedefinisjoner for TypeScript, Go, Rust eller Python — generert i nettleseren via quicktype.
