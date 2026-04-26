@@ -1,3 +1,4 @@
+import { tool as dataConverter } from './data-converter';
 import { tool as base64FileConverter } from './base64-file-converter';
 import { tool as base64StringConverter } from './base64-string-converter';
 import { tool as basicAuthGenerator } from './basic-auth-generator';
@@ -7,8 +8,6 @@ import { tool as asciiTextDrawer } from './ascii-text-drawer';
 
 import { tool as textToUnicode } from './text-to-unicode';
 import { tool as safelinkDecoder } from './safelink-decoder';
-import { tool as xmlToJson } from './xml-to-json';
-import { tool as jsonToXml } from './json-to-xml';
 import { tool as regexTester } from './regex-tester';
 import { tool as regexMemo } from './regex-memo';
 import { tool as markdownToHtml } from './markdown-to-html';
@@ -22,19 +21,12 @@ import { tool as stringObfuscator } from './string-obfuscator';
 import { tool as textDiff } from './text-diff';
 import { tool as emojiPicker } from './emoji-picker';
 import { tool as passwordStrengthAnalyser } from './password-strength-analyser';
-import { tool as yamlToToml } from './yaml-to-toml';
-import { tool as jsonToToml } from './json-to-toml';
-import { tool as tomlToYaml } from './toml-to-yaml';
-import { tool as tomlToJson } from './toml-to-json';
-import { tool as jsonToCsv } from './json-to-csv';
 import { tool as cameraRecorder } from './camera-recorder';
 import { tool as listConverter } from './list-converter';
 import { tool as phoneParserAndFormatter } from './phone-parser-and-formatter';
 import { tool as jsonDiff } from './json-diff';
 import { tool as ipv4RangeExpander } from './ipv4-range-expander';
 import { tool as httpStatusCodes } from './http-status-codes';
-import { tool as yamlToJson } from './yaml-to-json-converter';
-import { tool as jsonToYaml } from './json-to-yaml-converter';
 import { tool as ipv6UlaGenerator } from './ipv6-ula-generator';
 import { tool as ipv4AddressConverter } from './ipv4-address-converter';
 import { tool as benchmarkBuilder } from './benchmark-builder';
@@ -96,6 +88,7 @@ export const toolsByCategory: ToolCategory[] = [
   {
     name: 'Converter',
     components: [
+      dataConverter,
       dateTimeConverter,
       baseConverter,
       romanNumeralConverter,
@@ -106,15 +99,7 @@ export const toolsByCategory: ToolCategory[] = [
       textToNatoAlphabet,
       textToBinary,
       textToUnicode,
-      yamlToJson,
-      yamlToToml,
-      jsonToYaml,
-      jsonToToml,
       listConverter,
-      tomlToJson,
-      tomlToYaml,
-      xmlToJson,
-      jsonToXml,
       markdownToHtml,
     ],
   },
@@ -151,7 +136,6 @@ export const toolsByCategory: ToolCategory[] = [
       crontabGenerator,
       jsonViewer,
       jsonMinify,
-      jsonToCsv,
       sqlPrettify,
       chmodCalculator,
       dockerRunToDockerComposeConverter,
