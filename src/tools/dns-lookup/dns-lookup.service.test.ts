@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { dnsLookup } from './dns-lookup.service';
+import { ALL_RECORD_TYPES, dnsLookup, dnsLookupAll } from './dns-lookup.service';
 
 afterEach(() => {
   vi.unstubAllGlobals();
@@ -46,5 +46,48 @@ describe('dns-lookup', () => {
   it('throws on non-OK HTTP response', async () => {
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue({ ok: false, status: 502, statusText: 'Bad Gateway' }));
     await expect(dnsLookup({ name: 'x', type: 'A' })).rejects.toThrow(/502/);
+  });
+
+  describe('dnsLookupAll', () => {
+    it('queries every type in parallel and aggregates results', async () => {
+      const fetchMock = vi.fn().mockImplementation((url: string) => {
+        const type = new URL(url).searchParams.get('type');
+        return Promise.resolve({
+          ok: true,
+          json: async () => ({
+            Status: 0,
+            Question: [{ name: 'example.com', type }],
+            Answer: type === 'A' ? [{ name: 'example.com', type: 1, TTL: 300, data: '1.2.3.4' }] : [],
+          }),
+        });
+      });
+      vi.stubGlobal('fetch', fetchMock);
+
+      const r = await dnsLookupAll('example.com');
+      expect(fetchMock).toHaveBeenCalledTimes(ALL_RECORD_TYPES.length);
+      expect(r.results.map(e => e.type)).toEqual(ALL_RECORD_TYPES);
+      expect(r.results.find(e => e.type === 'A')?.answers).toHaveLength(1);
+      expect(r.results.find(e => e.type === 'MX')?.answers).toHaveLength(0);
+    });
+
+    it('captures per-type errors without failing the whole batch', async () => {
+      const fetchMock = vi.fn().mockImplementation((url: string) => {
+        const type = new URL(url).searchParams.get('type');
+        if (type === 'CAA') {
+          return Promise.resolve({ ok: false, status: 502, statusText: 'Bad Gateway' });
+        }
+        return Promise.resolve({ ok: true, json: async () => ({ Status: 0, Answer: [] }) });
+      });
+      vi.stubGlobal('fetch', fetchMock);
+
+      const r = await dnsLookupAll('example.com');
+      const caa = r.results.find(e => e.type === 'CAA');
+      expect(caa?.error).toMatch(/502/);
+      expect(r.results.filter(e => !e.error)).toHaveLength(ALL_RECORD_TYPES.length - 1);
+    });
+
+    it('throws on empty input', async () => {
+      await expect(dnsLookupAll('  ')).rejects.toThrow('required');
+    });
   });
 });

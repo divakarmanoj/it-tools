@@ -26,6 +26,43 @@ export interface DohResult {
   authority: DohAnswer[]
 }
 
+/** Record types shown in the multi-lookup view, in the order they should render. */
+export const ALL_RECORD_TYPES: RecordType[] = ['A', 'AAAA', 'CNAME', 'MX', 'TXT', 'NS', 'SOA', 'CAA', 'SRV'];
+
+export interface DohMultiResultEntry {
+  type: RecordType
+  status: number
+  statusName: string
+  answers: DohAnswer[]
+  error?: string
+}
+
+export interface DohMultiResult {
+  question: string
+  results: DohMultiResultEntry[]
+}
+
+export async function dnsLookupAll(name: string): Promise<DohMultiResult> {
+  const trimmed = name.trim();
+  if (!trimmed) {
+    throw new Error('Domain name is required.');
+  }
+
+  const settled = await Promise.all(
+    ALL_RECORD_TYPES.map(async (type): Promise<DohMultiResultEntry> => {
+      try {
+        const r = await dnsLookup({ name: trimmed, type });
+        return { type, status: r.status, statusName: r.statusName, answers: r.answers };
+      }
+      catch (e: any) {
+        return { type, status: -1, statusName: 'Error', answers: [], error: e?.message ?? String(e) };
+      }
+    }),
+  );
+
+  return { question: trimmed, results: settled };
+}
+
 export async function dnsLookup({ name, type }: { name: string; type: RecordType }): Promise<DohResult> {
   const trimmed = name.trim();
   if (!trimmed) {
