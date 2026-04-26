@@ -485,3 +485,27 @@ tools:
   json-to-types:
     title: JSON zu TypeScript / Go / Rust / Python Typen
     description: Füge ein JSON-Beispiel ein und erhalte Typdefinitionen für TypeScript, Go, Rust oder Python — clientseitig generiert mit quicktype.
+
+  dns-lookup:
+    title: DNS-Lookup (DoH)
+    description: Auflösung von A-, AAAA-, MX-, TXT-, CAA-, NS-, SOA-, CNAME- und SRV-Einträgen über Cloudflare DNS-over-HTTPS — direkt aus dem Browser.
+
+  ipv6-expander:
+    title: IPv6 erweitern & komprimieren
+    description: Erweitere eine komprimierte IPv6-Adresse zur vollständigen 8-Hextet-Form oder komprimiere eine erweiterte Adresse in die kanonische Form nach RFC 5952.
+
+  whois-lookup:
+    title: WHOIS / RDAP-Lookup
+    description: Schlage Registrierungsinformationen für eine Domain oder IP-Adresse über RDAP (rdap.org) nach — modernes WHOIS über HTTPS.
+
+  reverse-dns-lookup:
+    title: Reverse-DNS (PTR)-Lookup
+    description: Löse einen PTR-Eintrag für eine beliebige IPv4- oder IPv6-Adresse über Cloudflare DNS-over-HTTPS auf.
+
+  asn-lookup:
+    title: ASN-Lookup
+    description: Schlage das ursprüngliche autonome System (ASN, Präfix, Land, Halter) für eine IPv4/IPv6-Adresse nach — über Team Cymru per DoH.
+
+  well-known-ports:
+    title: Referenz für well-known Ports
+    description: Durchsuchbare Referenz gängiger TCP/UDP-Dienstports (HTTP, SSH, MySQL, Redis, Kafka usw.) mit Protokollen und Beschreibungen.

@@ -32,6 +32,12 @@ import { tool as ipv4AddressConverter } from './ipv4-address-converter';
 import { tool as benchmarkBuilder } from './benchmark-builder';
 import { tool as userAgentParser } from './user-agent-parser';
 import { tool as ipv4SubnetCalculator } from './ipv4-subnet-calculator';
+import { tool as dnsLookup } from './dns-lookup';
+import { tool as ipv6Expander } from './ipv6-expander';
+import { tool as whoisLookup } from './whois-lookup';
+import { tool as reverseDnsLookup } from './reverse-dns-lookup';
+import { tool as asnLookup } from './asn-lookup';
+import { tool as wellKnownPorts } from './well-known-ports';
 import { tool as dockerRunToDockerComposeConverter } from './docker-run-to-docker-compose-converter';
 import { tool as htmlWysiwygEditor } from './html-wysiwyg-editor';
 import { tool as rsaKeyPairGenerator } from './rsa-key-pair-generator';
@@ -174,7 +180,20 @@ export const toolsByCategory: ToolCategory[] = [
   },
   {
     name: 'Network',
-    components: [ipv4SubnetCalculator, ipv4AddressConverter, ipv4RangeExpander, macAddressLookup, macAddressGenerator, ipv6UlaGenerator],
+    components: [
+      ipv4SubnetCalculator,
+      ipv4AddressConverter,
+      ipv4RangeExpander,
+      ipv6Expander,
+      ipv6UlaGenerator,
+      dnsLookup,
+      reverseDnsLookup,
+      whoisLookup,
+      asnLookup,
+      wellKnownPorts,
+      macAddressLookup,
+      macAddressGenerator,
+    ],
   },
   {
     name: 'Math',

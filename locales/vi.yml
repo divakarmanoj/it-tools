@@ -413,3 +413,27 @@ tools:
   json-to-types:
     title: JSON sang kiểu TypeScript / Go / Rust / Python
     description: Dán một mẫu JSON và nhận định nghĩa kiểu cho TypeScript, Go, Rust hoặc Python — sinh ra phía máy khách bằng quicktype.
+
+  dns-lookup:
+    title: Tra cứu DNS (DoH)
+    description: Phân giải các bản ghi A, AAAA, MX, TXT, CAA, NS, SOA, CNAME và SRV qua Cloudflare DNS-over-HTTPS — trực tiếp từ trình duyệt.
+
+  ipv6-expander:
+    title: Mở rộng & nén địa chỉ IPv6
+    description: Mở rộng địa chỉ IPv6 đã nén thành dạng đầy đủ 8 hextet, hoặc nén địa chỉ đã mở rộng thành dạng chuẩn RFC 5952.
+
+  whois-lookup:
+    title: Tra cứu WHOIS / RDAP
+    description: Tra cứu thông tin đăng ký cho một tên miền hoặc địa chỉ IP qua RDAP (rdap.org) — WHOIS hiện đại qua HTTPS.
+
+  reverse-dns-lookup:
+    title: Tra cứu DNS ngược (PTR)
+    description: Phân giải bản ghi PTR cho bất kỳ địa chỉ IPv4 hoặc IPv6 nào qua Cloudflare DNS-over-HTTPS.
+
+  asn-lookup:
+    title: Tra cứu ASN
+    description: Tra cứu hệ thống tự trị gốc (ASN, prefix, quốc gia, chủ sở hữu) cho địa chỉ IPv4/IPv6 — qua Team Cymru bằng DoH.
+
+  well-known-ports:
+    title: Tham chiếu các cổng thông dụng
+    description: Tham chiếu có thể tìm kiếm các cổng dịch vụ TCP/UDP phổ biến (HTTP, SSH, MySQL, Redis, Kafka, v.v.) kèm giao thức và mô tả.

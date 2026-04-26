@@ -420,3 +420,27 @@ tools:
   json-to-types:
     title: JSON 转 TypeScript / Go / Rust / Python 类型
     description: 粘贴一段 JSON 样本，即可生成 TypeScript、Go、Rust 或 Python 的类型定义——全部在浏览器中通过 quicktype 完成。
+
+  dns-lookup:
+    title: DNS 查询（DoH）
+    description: 通过 Cloudflare DNS-over-HTTPS 在浏览器中直接解析 A、AAAA、MX、TXT、CAA、NS、SOA、CNAME 和 SRV 记录。
+
+  ipv6-expander:
+    title: IPv6 展开与压缩
+    description: 将压缩的 IPv6 地址展开为完整的 8 段格式，或将展开的地址按 RFC 5952 压缩为规范格式。
+
+  whois-lookup:
+    title: WHOIS / RDAP 查询
+    description: 通过 RDAP（rdap.org）查询域名或 IP 的注册信息——基于 HTTPS 的现代 WHOIS。
+
+  reverse-dns-lookup:
+    title: 反向 DNS（PTR）查询
+    description: 通过 Cloudflare DNS-over-HTTPS 解析任意 IPv4 或 IPv6 地址的 PTR 记录。
+
+  asn-lookup:
+    title: ASN 查询
+    description: 通过 Team Cymru 经 DoH 查询任意 IPv4/IPv6 地址所属的自治系统（ASN、前缀、国家、持有者）。
+
+  well-known-ports:
+    title: 知名端口参考表
+    description: 可搜索的常见 TCP/UDP 服务端口参考（HTTP、SSH、MySQL、Redis、Kafka 等），包含协议与描述。

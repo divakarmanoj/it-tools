@@ -424,3 +424,27 @@ tools:
   json-to-types:
     title: JSON til TypeScript / Go / Rust / Python typer
     description: Lim inn et JSON-eksempel og få typedefinisjoner for TypeScript, Go, Rust eller Python — generert i nettleseren via quicktype.
+
+  dns-lookup:
+    title: DNS-oppslag (DoH)
+    description: Slå opp A-, AAAA-, MX-, TXT-, CAA-, NS-, SOA-, CNAME- og SRV-poster via Cloudflare DNS-over-HTTPS — direkte fra nettleseren.
+
+  ipv6-expander:
+    title: IPv6 utvid og komprimer
+    description: Utvid en komprimert IPv6-adresse til full 8-hextets form, eller komprimer en utvidet adresse til kanonisk form (RFC 5952).
+
+  whois-lookup:
+    title: WHOIS / RDAP-oppslag
+    description: Slå opp registreringsinformasjon for et domene eller en IP-adresse via RDAP (rdap.org) — moderne WHOIS over HTTPS.
+
+  reverse-dns-lookup:
+    title: Reverse DNS (PTR) oppslag
+    description: Slå opp PTR-post for en hvilken som helst IPv4- eller IPv6-adresse via Cloudflare DNS-over-HTTPS.
+
+  asn-lookup:
+    title: ASN-oppslag
+    description: Slå opp opprinnelig autonomt system (ASN, prefiks, land, eier) for en IPv4/IPv6-adresse — via Team Cymru over DoH.
+
+  well-known-ports:
+    title: Referanse for kjente porter
+    description: Søkbar referanse over vanlige TCP/UDP-tjenesteporter (HTTP, SSH, MySQL, Redis, Kafka osv.) med protokoller og beskrivelser.
