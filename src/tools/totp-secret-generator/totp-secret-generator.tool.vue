@@ -136,7 +136,7 @@ const periodOptions = [
 
     <div mt-4 flex flex-col items-center gap-3>
       <n-image :src="qrcode" />
-      <p op-70 text-center>
+      <p text-center op-70>
         Scan with Google Authenticator, 1Password, Authy, etc. — or copy the URI manually.
       </p>
     </div>

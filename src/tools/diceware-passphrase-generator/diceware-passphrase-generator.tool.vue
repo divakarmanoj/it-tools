@@ -64,7 +64,7 @@ const separatorOptions = [
       mt-2
     />
 
-    <div mt-3 op-70 text-center>
+    <div mt-3 text-center op-70>
       Entropy: <strong>{{ bits.toFixed(2) }} bits</strong>
       ({{ count }} × {{ BITS_PER_WORD.toFixed(2) }} bits/word)
     </div>
@@ -78,7 +78,7 @@ const separatorOptions = [
       </c-button>
     </div>
 
-    <div mt-6 op-50 text-xs text-center>
+    <div mt-6 text-center text-xs op-50>
       Wordlist © Electronic Frontier Foundation, CC-BY 3.0 — EFF Large Wordlist (7,776 words).
     </div>
   </c-card>

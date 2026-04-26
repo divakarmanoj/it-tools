@@ -46,7 +46,7 @@ const entropyStatus = computed(() => {
   </c-card>
 
   <c-card mt-4 title="Entropy">
-    <div flex items-baseline justify-between gap-3 mb-2>
+    <div mb-2 flex items-baseline justify-between gap-3>
       <div text-3xl font-bold>
         {{ analysis.entropyBits.toFixed(1) }} <span text-base op-60>bits</span>
       </div>
@@ -60,13 +60,13 @@ const entropyStatus = computed(() => {
       :show-indicator="false"
       :height="12"
     />
-    <div mt-2 op-60 text-sm text-center>
+    <div mt-2 text-center text-sm op-60>
       Length {{ analysis.length }} × log₂({{ analysis.charsetSize || 0 }}) = {{ analysis.entropyBits.toFixed(2) }} bits
     </div>
   </c-card>
 
   <c-card mt-4 title="Character composition">
-    <div v-if="analysis.length === 0" op-60 text-center>
+    <div v-if="analysis.length === 0" text-center op-60>
       Type a password above to see the breakdown.
     </div>
     <div v-else>
@@ -79,7 +79,7 @@ const entropyStatus = computed(() => {
           :title="`${seg.name}: ${seg.count} char(s)`"
         />
       </div>
-      <div mt-3 grid gap-1 style="grid-template-columns: auto 1fr auto auto;">
+      <div grid mt-3 gap-1 style="grid-template-columns: auto 1fr auto auto;">
         <template v-for="seg in analysis.segments.filter(s => s.count > 0)" :key="seg.name">
           <div class="legend-swatch" :style="{ background: segmentColors[seg.name] }" />
           <div>{{ seg.name }}</div>
@@ -109,7 +109,7 @@ const entropyStatus = computed(() => {
             <div font-medium>
               {{ row.profile.name }}
             </div>
-            <div op-60 text-xs>
+            <div text-xs op-60>
               {{ row.profile.description }}
             </div>
           </td>
@@ -120,7 +120,7 @@ const entropyStatus = computed(() => {
         </tr>
       </tbody>
     </n-table>
-    <div mt-3 op-60 text-xs>
+    <div mt-3 text-xs op-60>
       Estimates assume the attacker knows the charset but does not exploit dictionary words or common patterns.
       Real-world cracking against weak passwords is typically much faster.
     </div>

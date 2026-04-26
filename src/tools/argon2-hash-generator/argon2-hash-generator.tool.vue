@@ -7,6 +7,7 @@ import {
   verifyPassword,
 } from './argon2-hash-generator.service';
 import { useCopy } from '@/composable/copy';
+import { computedRefreshable } from '@/composable/computedRefreshable';
 
 const themeVars = useThemeVars();
 
@@ -18,16 +19,7 @@ const parallelism = ref(1);
 const hashLength = ref(32);
 const saltLength = ref(16);
 
-const saltSeed = ref(0);
-function refreshSalt() {
-  saltSeed.value++;
-}
-
-const salt = computed(() => {
-  // recompute when saltSeed/saltLength changes
-  void saltSeed.value;
-  return generateSalt(saltLength.value);
-});
+const [salt, refreshSalt] = computedRefreshable(() => generateSalt(saltLength.value));
 
 const hashing = ref(false);
 const hashed = ref('');
@@ -137,7 +129,7 @@ const variantOptions = [
       </n-gi>
     </n-grid>
 
-    <c-input-text :value="hashing ? 'Hashing…' : hashed" multiline rows="3" autosize readonly monospace mt-3 />
+    <c-input-text :value="hashing ? 'Hashing…' : hashed" rows="3" multiline autosize monospace readonly mt-3 />
     <div v-if="hashError" mt-2 op-70 style="color: var(--n-error-color)">
       {{ hashError }}
     </div>

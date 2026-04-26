@@ -44,7 +44,7 @@ export function serialize({ format, value }: { format: DataFormat; value: unknow
       if (!isPlainObject(value)) {
         throw new Error('TOML output requires a top-level object (table). Wrap arrays under a key.');
       }
-      return [stringifyToml(value as Record<string, unknown>)].flat().join('\n').trim() + '\n';
+      return `${[stringifyToml(value as Record<string, unknown>)].flat().join('\n').trim()}\n`;
     case 'xml':
       return xmlJs.js2xml(value as object, { compact: true, spaces: 2 });
     case 'csv':

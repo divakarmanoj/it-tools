@@ -1,60 +1,3 @@
-<template>
-  <div mx-auto w-full max-w-2400px important:flex-1>
-    <div mb-3 flex flex-wrap items-end gap-3>
-      <c-select
-        v-model:value="from"
-        label="From"
-        label-position="top"
-        :options="dataFormats"
-        flex-1
-        min-w-120px
-      />
-      <c-button circle title="Swap" mb-1 @click="swap">
-        <n-icon size="20" :component="ArrowsLeftRight" />
-      </c-button>
-      <c-select
-        v-model:value="to"
-        label="To"
-        label-position="top"
-        :options="dataFormats"
-        flex-1
-        min-w-120px
-      />
-    </div>
-
-    <div flex flex-col gap-4 class="panes" lg:flex-row>
-      <div flex-1 class="pane">
-        <c-input-text
-          ref="inputElement"
-          v-model:value="input"
-          :label="`Input (${from.toUpperCase()})`"
-          :placeholder="`Paste your ${from.toUpperCase()} here...`"
-          raw-text
-          multiline
-          monospace
-          test-id="input"
-          class="fill"
-          :validation-rules="rules"
-        />
-      </div>
-      <div flex-1 overflow-auto class="pane">
-        <div mb-5px>
-          Output ({{ to.toUpperCase() }})
-        </div>
-        <textarea-copyable
-          :value="output"
-          :language="outputLanguage"
-          :follow-height-of="inputElement?.inputWrapperRef"
-          class="fill"
-        />
-        <c-alert v-if="error" mt-2 type="error">
-          {{ error }}
-        </c-alert>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
 import { ArrowsLeftRight } from '@vicons/tabler';
 import { type DataFormat, convert, dataFormats, parse } from './data-converter.service';
@@ -106,6 +49,63 @@ function swap() {
   }
 }
 </script>
+
+<template>
+  <div mx-auto max-w-2400px w-full important:flex-1>
+    <div mb-3 flex flex-wrap items-end gap-3>
+      <c-select
+        v-model:value="from"
+        label="From"
+        label-position="top"
+        :options="dataFormats"
+
+        min-w-120px flex-1
+      />
+      <c-button circle title="Swap" mb-1 @click="swap">
+        <n-icon size="20" :component="ArrowsLeftRight" />
+      </c-button>
+      <c-select
+        v-model:value="to"
+        label="To"
+        label-position="top"
+        :options="dataFormats"
+
+        min-w-120px flex-1
+      />
+    </div>
+
+    <div flex flex-col gap-4 class="panes" lg:flex-row>
+      <div flex-1 class="pane">
+        <CInputText
+          ref="inputElement"
+          v-model:value="input"
+          :label="`Input (${from.toUpperCase()})`"
+          :placeholder="`Paste your ${from.toUpperCase()} here...`"
+          raw-text
+          multiline
+          monospace
+          test-id="input"
+          class="fill"
+          :validation-rules="rules"
+        />
+      </div>
+      <div flex-1 overflow-auto class="pane">
+        <div mb-5px>
+          Output ({{ to.toUpperCase() }})
+        </div>
+        <textarea-copyable
+          :value="output"
+          :language="outputLanguage"
+          :follow-height-of="inputElement?.inputWrapperRef"
+          class="fill"
+        />
+        <c-alert v-if="error" mt-2 type="error">
+          {{ error }}
+        </c-alert>
+      </div>
+    </div>
+  </div>
+</template>
 
 <style lang="less" scoped>
 .panes {
