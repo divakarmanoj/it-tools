@@ -131,6 +131,50 @@ tools:
     title: Password entropy visualizer
     description: Visualize a password's character composition, total entropy bits, and estimated time to crack across multiple attacker profiles.
 
+  htpasswd-generator:
+    title: .htpasswd generator
+    description: Generate Apache .htpasswd lines (bcrypt / SHA1 / plain) and verify a password against an existing line — entirely client-side.
+
+  jwt-signer:
+    title: JWT signer & verifier
+    description: Sign and verify JSON Web Tokens with HS / RS / PS / ES algorithms. Generate fresh asymmetric keypairs in the browser via jose.
+
+  cors-tester:
+    title: CORS preflight tester
+    description: Send an OPTIONS preflight to any URL from the browser, inspect Access-Control-* headers, and get the equivalent curl command.
+
+  robots-txt-and-sitemap-generator:
+    title: robots.txt + sitemap.xml
+    description: Build a robots.txt with multiple user-agent groups, validate an existing one, and generate a sitemap.xml from a URL list.
+
+  gitignore-generator:
+    title: .gitignore generator
+    description: Pick from 25+ language / IDE / OS templates and concatenate them into a single .gitignore file — fully offline.
+
+  license-chooser:
+    title: License chooser
+    description: Pick a popular open-source license (MIT, Apache 2.0, BSD, GPL, MPL, ISC, Unlicense, …), fill in author and year, copy the LICENSE text.
+
+  shields-badge-builder:
+    title: shields.io badge builder
+    description: Build shields.io badge URLs interactively. Pick label, message, color, style, logo, and copy as URL, Markdown, or HTML.
+
+  openapi-viewer:
+    title: OpenAPI / Swagger viewer
+    description: Paste an OpenAPI 3 or Swagger 2 spec (YAML or JSON), validate the structure, and browse endpoints and schemas.
+
+  graphql-formatter:
+    title: GraphQL formatter & schema viewer
+    description: Pretty-print GraphQL queries, mutations, and SDL. Browse types, fields, arguments, enums, unions parsed from a schema.
+
+  mock-data-generator:
+    title: Mock data generator
+    description: Generate fake test data with faker — pick fields and types, set row count and seed, output JSON / CSV / SQL INSERT.
+
+  dockerfile-linter:
+    title: Dockerfile linter
+    description: Lint Dockerfiles in your browser against a curated subset of hadolint rules (DL3007, DL4000, pinned packages, JSON CMD, pipefail, …).
+
   chronometer:
     title: Chronometer
     description: Monitor the duration of a thing. Basically a chronometer with simple chronometer features.

@@ -417,6 +417,50 @@ tools:
     title: 密码熵可视化
     description: 可视化密码的字符组成、总熵位数以及在多种攻击者模型下的估计破解时间。
 
+  htpasswd-generator:
+    title: .htpasswd 生成器
+    description: 生成 Apache .htpasswd 行（bcrypt / SHA1 / 明文）并对照已有行验证密码 —— 完全在浏览器中完成。
+
+  jwt-signer:
+    title: JWT 签名与验证
+    description: 使用 HS / RS / PS / ES 算法签发和验证 JSON Web Token。在浏览器中通过 jose 生成全新的非对称密钥对。
+
+  cors-tester:
+    title: CORS 预检测试
+    description: 在浏览器中向任意 URL 发起 OPTIONS 预检请求，检查 Access-Control-* 响应头，并获取等价的 curl 命令。
+
+  robots-txt-and-sitemap-generator:
+    title: robots.txt + sitemap.xml
+    description: 构建带多个 user-agent 分组的 robots.txt、校验现有文件、并基于 URL 列表生成 sitemap.xml。
+
+  gitignore-generator:
+    title: .gitignore 生成器
+    description: 从 25 多个语言 / IDE / 操作系统模板中选择并合并为一个 .gitignore 文件 —— 完全离线。
+
+  license-chooser:
+    title: 许可证选择器
+    description: 选择一个常见开源许可证（MIT、Apache 2.0、BSD、GPL、MPL、ISC、Unlicense 等），填写作者和年份，复制 LICENSE 文本。
+
+  shields-badge-builder:
+    title: shields.io 徽章生成器
+    description: 交互式构建 shields.io 徽章 URL。设置标签、消息、颜色、样式、logo，并复制为 URL、Markdown 或 HTML。
+
+  openapi-viewer:
+    title: OpenAPI / Swagger 查看器
+    description: 粘贴 OpenAPI 3 或 Swagger 2 规范（YAML 或 JSON），校验结构并浏览端点与 schema。
+
+  graphql-formatter:
+    title: GraphQL 格式化与 Schema 查看
+    description: 美化 GraphQL 查询、变更与 SDL。浏览从 schema 解析出的类型、字段、参数、枚举与联合类型。
+
+  mock-data-generator:
+    title: 模拟数据生成器
+    description: 通过 faker 生成测试数据 —— 选择字段与类型，设置行数与种子，输出 JSON / CSV / SQL INSERT。
+
+  dockerfile-linter:
+    title: Dockerfile 检查器
+    description: 在浏览器中根据精选的 hadolint 规则子集（DL3007、DL4000、版本固定、JSON CMD、pipefail 等）检查 Dockerfile。
+
   json-to-types:
     title: JSON 转 TypeScript / Go / Rust / Python 类型
     description: 粘贴一段 JSON 样本，即可生成 TypeScript、Go、Rust 或 Python 的类型定义——全部在浏览器中通过 quicktype 完成。

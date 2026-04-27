@@ -482,6 +482,50 @@ tools:
     title: Passwort-Entropie-Visualisierer
     description: Visualisiere die Zeichenzusammensetzung eines Passworts, die gesamte Entropie in Bits und die geschätzte Knackzeit für mehrere Angreiferprofile.
 
+  htpasswd-generator:
+    title: .htpasswd-Generator
+    description: Erzeuge Apache-.htpasswd-Zeilen (bcrypt / SHA1 / Klartext) und überprüfe ein Passwort gegen eine bestehende Zeile — komplett clientseitig.
+
+  jwt-signer:
+    title: JWT-Signierer & Verifier
+    description: JSON Web Tokens mit HS-/RS-/PS-/ES-Algorithmen signieren und verifizieren. Erzeuge frische asymmetrische Schlüsselpaare im Browser über jose.
+
+  cors-tester:
+    title: CORS-Preflight-Tester
+    description: Sende einen OPTIONS-Preflight an eine beliebige URL aus dem Browser, prüfe Access-Control-*-Header und erhalte den passenden curl-Befehl.
+
+  robots-txt-and-sitemap-generator:
+    title: robots.txt + sitemap.xml
+    description: Baue eine robots.txt mit mehreren User-Agent-Gruppen, validiere eine bestehende Datei und erzeuge eine sitemap.xml aus einer URL-Liste.
+
+  gitignore-generator:
+    title: .gitignore-Generator
+    description: Wähle aus 25+ Vorlagen für Sprachen, IDEs und Betriebssysteme und füge sie zu einer einzigen .gitignore zusammen — vollständig offline.
+
+  license-chooser:
+    title: Lizenz-Wähler
+    description: Wähle eine populäre Open-Source-Lizenz (MIT, Apache 2.0, BSD, GPL, MPL, ISC, Unlicense …), trage Autor und Jahr ein und kopiere den LICENSE-Text.
+
+  shields-badge-builder:
+    title: shields.io-Badge-Builder
+    description: Baue shields.io-Badge-URLs interaktiv. Wähle Label, Nachricht, Farbe, Stil, Logo und kopiere als URL, Markdown oder HTML.
+
+  openapi-viewer:
+    title: OpenAPI / Swagger Viewer
+    description: Füge eine OpenAPI-3- oder Swagger-2-Spezifikation (YAML oder JSON) ein, validiere die Struktur und durchsuche Endpunkte und Schemas.
+
+  graphql-formatter:
+    title: GraphQL-Formatter & Schema-Viewer
+    description: Formatiere GraphQL-Queries, -Mutations und -SDL. Durchsuche Typen, Felder, Argumente, Enums und Unions, die aus einem Schema geparst werden.
+
+  mock-data-generator:
+    title: Mock-Daten-Generator
+    description: Erzeuge Test-Daten mit faker — wähle Felder und Typen, lege Zeilenanzahl und Seed fest, gib JSON / CSV / SQL INSERT aus.
+
+  dockerfile-linter:
+    title: Dockerfile-Linter
+    description: Linte Dockerfiles im Browser gegen einen kuratierten Teil der hadolint-Regeln (DL3007, DL4000, gepinnte Pakete, JSON-CMD, pipefail …).
+
   json-to-types:
     title: JSON zu TypeScript / Go / Rust / Python Typen
     description: Füge ein JSON-Beispiel ein und erhalte Typdefinitionen für TypeScript, Go, Rust oder Python — clientseitig generiert mit quicktype.

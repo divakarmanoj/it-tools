@@ -37,6 +37,7 @@
     "release": "node ./scripts/release.mjs"
   },
   "dependencies": {
+    "@faker-js/faker": "^10.4.0",
     "@it-tools/bip39": "^0.0.4",
     "@it-tools/oggen": "^1.3.0",
     "@regexper/render": "^1.0.0",
@@ -71,10 +72,12 @@
     "figlet": "^1.7.0",
     "figue": "^1.2.0",
     "fuse.js": "^6.6.2",
+    "graphql": "^16.13.2",
     "hash-wasm": "^4.12.0",
     "highlight.js": "^11.7.0",
     "iarna-toml-esm": "^3.0.5",
     "ibantools": "^4.3.3",
+    "jose": "^6.2.2",
     "js-base64": "^3.7.6",
     "json5": "^2.2.3",
     "jwt-decode": "^3.1.2",

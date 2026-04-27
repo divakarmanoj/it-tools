@@ -410,6 +410,50 @@ tools:
     title: Trình trực quan hóa entropy của mật khẩu
     description: Trực quan hóa thành phần ký tự của mật khẩu, tổng entropy theo bit và thời gian phá ước tính qua nhiều mô hình tấn công.
 
+  htpasswd-generator:
+    title: Trình tạo .htpasswd
+    description: Tạo các dòng .htpasswd cho Apache (bcrypt / SHA1 / văn bản thuần) và xác minh mật khẩu so với một dòng có sẵn — hoàn toàn ở phía trình duyệt.
+
+  jwt-signer:
+    title: Ký & xác minh JWT
+    description: Ký và xác minh JSON Web Token bằng các thuật toán HS / RS / PS / ES. Sinh cặp khóa bất đối xứng mới ngay trong trình duyệt qua jose.
+
+  cors-tester:
+    title: Kiểm thử CORS preflight
+    description: Gửi yêu cầu OPTIONS preflight tới bất kỳ URL nào từ trình duyệt, kiểm tra các header Access-Control-* và nhận lệnh curl tương đương.
+
+  robots-txt-and-sitemap-generator:
+    title: robots.txt + sitemap.xml
+    description: Tạo robots.txt với nhiều nhóm user-agent, kiểm tra tệp có sẵn và tạo sitemap.xml từ danh sách URL.
+
+  gitignore-generator:
+    title: Trình tạo .gitignore
+    description: Chọn từ hơn 25 mẫu cho ngôn ngữ / IDE / OS và ghép thành một tệp .gitignore — hoàn toàn ngoại tuyến.
+
+  license-chooser:
+    title: Trình chọn giấy phép
+    description: Chọn một giấy phép mã nguồn mở phổ biến (MIT, Apache 2.0, BSD, GPL, MPL, ISC, Unlicense …), điền tác giả và năm, sao chép nội dung LICENSE.
+
+  shields-badge-builder:
+    title: Trình tạo huy hiệu shields.io
+    description: Tạo URL huy hiệu shields.io trực quan. Chọn nhãn, thông điệp, màu, kiểu, logo và sao chép dưới dạng URL, Markdown hoặc HTML.
+
+  openapi-viewer:
+    title: Trình xem OpenAPI / Swagger
+    description: Dán đặc tả OpenAPI 3 hoặc Swagger 2 (YAML hoặc JSON), kiểm tra cấu trúc và duyệt qua các endpoint và schema.
+
+  graphql-formatter:
+    title: Trình định dạng GraphQL & xem schema
+    description: Định dạng đẹp các truy vấn, mutation và SDL của GraphQL. Duyệt qua các kiểu, trường, đối số, enum, union được phân tích từ schema.
+
+  mock-data-generator:
+    title: Trình tạo dữ liệu giả lập
+    description: Tạo dữ liệu thử nghiệm bằng faker — chọn trường và kiểu, đặt số dòng và seed, xuất ra JSON / CSV / SQL INSERT.
+
+  dockerfile-linter:
+    title: Trình kiểm tra Dockerfile
+    description: Kiểm tra Dockerfile trong trình duyệt theo một tập quy tắc hadolint được tuyển chọn (DL3007, DL4000, ghim phiên bản, CMD JSON, pipefail …).
+
   json-to-types:
     title: JSON sang kiểu TypeScript / Go / Rust / Python
     description: Dán một mẫu JSON và nhận định nghĩa kiểu cho TypeScript, Go, Rust hoặc Python — sinh ra phía máy khách bằng quicktype.

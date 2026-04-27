@@ -421,6 +421,50 @@ tools:
     title: Passordentropi-visualisering
     description: Visualiser tegnsammensetningen i et passord, total entropi i bits og estimert knekketid på tvers av flere angripere.
 
+  htpasswd-generator:
+    title: .htpasswd-generator
+    description: Lag Apache .htpasswd-linjer (bcrypt / SHA1 / klartekst) og verifiser et passord mot en eksisterende linje — helt klientside.
+
+  jwt-signer:
+    title: JWT-signering og -verifisering
+    description: Signer og verifiser JSON Web Tokens med HS-/RS-/PS-/ES-algoritmer. Generer nye asymmetriske nøkkelpar i nettleseren via jose.
+
+  cors-tester:
+    title: CORS-preflight-tester
+    description: Send en OPTIONS-preflight til en URL fra nettleseren, inspiser Access-Control-*-headere, og få den tilsvarende curl-kommandoen.
+
+  robots-txt-and-sitemap-generator:
+    title: robots.txt + sitemap.xml
+    description: Bygg en robots.txt med flere user-agent-grupper, valider en eksisterende, og generer en sitemap.xml fra en URL-liste.
+
+  gitignore-generator:
+    title: .gitignore-generator
+    description: Velg blant 25+ maler for språk / IDE / OS og slå dem sammen til én .gitignore-fil — helt offline.
+
+  license-chooser:
+    title: Lisensvelger
+    description: Velg en populær open source-lisens (MIT, Apache 2.0, BSD, GPL, MPL, ISC, Unlicense …), fyll inn forfatter og år, kopier LICENSE-teksten.
+
+  shields-badge-builder:
+    title: shields.io-merke-byggeverktøy
+    description: Bygg shields.io-merke-URL-er interaktivt. Velg etikett, melding, farge, stil, logo og kopier som URL, Markdown eller HTML.
+
+  openapi-viewer:
+    title: OpenAPI / Swagger-viser
+    description: Lim inn en OpenAPI 3- eller Swagger 2-spesifikasjon (YAML eller JSON), valider strukturen, og bla i endepunkter og skjemaer.
+
+  graphql-formatter:
+    title: GraphQL-formatterer og skjemaviser
+    description: Formater GraphQL-spørringer, mutasjoner og SDL. Bla i typer, felter, argumenter, enums og unions parset fra et skjema.
+
+  mock-data-generator:
+    title: Mock-data-generator
+    description: Generer testdata med faker — velg felter og typer, sett antall rader og seed, eksporter som JSON / CSV / SQL INSERT.
+
+  dockerfile-linter:
+    title: Dockerfile-linter
+    description: Lint Dockerfiles i nettleseren mot et kuratert utvalg hadolint-regler (DL3007, DL4000, pinnede pakker, JSON-CMD, pipefail …).
+
   json-to-types:
     title: JSON til TypeScript / Go / Rust / Python typer
     description: Lim inn et JSON-eksempel og få typedefinisjoner for TypeScript, Go, Rust eller Python — generert i nettleseren via quicktype.

@@ -92,6 +92,17 @@ import { tool as uuidGenerator } from './uuid-generator';
 import { tool as macAddressLookup } from './mac-address-lookup';
 import { tool as xmlFormatter } from './xml-formatter';
 import { tool as yamlViewer } from './yaml-viewer';
+import { tool as licenseChooser } from './license-chooser';
+import { tool as gitignoreGenerator } from './gitignore-generator';
+import { tool as shieldsBadgeBuilder } from './shields-badge-builder';
+import { tool as robotsTxtAndSitemapGenerator } from './robots-txt-and-sitemap-generator';
+import { tool as corsTester } from './cors-tester';
+import { tool as htpasswdGenerator } from './htpasswd-generator';
+import { tool as jwtSigner } from './jwt-signer';
+import { tool as openapiViewer } from './openapi-viewer';
+import { tool as graphqlFormatter } from './graphql-formatter';
+import { tool as mockDataGenerator } from './mock-data-generator';
+import { tool as dockerfileLinter } from './dockerfile-linter';
 
 export const toolsByCategory: ToolCategory[] = [
   {
@@ -113,6 +124,8 @@ export const toolsByCategory: ToolCategory[] = [
       totpSecretGenerator,
       dicewarePassphraseGenerator,
       passwordEntropyVisualizer,
+      htpasswdGenerator,
+      jwtSigner,
       pdfSignatureChecker,
     ],
   },
@@ -154,6 +167,8 @@ export const toolsByCategory: ToolCategory[] = [
       httpStatusCodes,
       jsonDiff,
       safelinkDecoder,
+      corsTester,
+      robotsTxtAndSitemapGenerator,
     ],
   },
   {
@@ -176,6 +191,12 @@ export const toolsByCategory: ToolCategory[] = [
       emailNormalizer,
       regexTester,
       regexMemo,
+      gitignoreGenerator,
+      licenseChooser,
+      shieldsBadgeBuilder,
+      openapiViewer,
+      graphqlFormatter,
+      dockerfileLinter,
     ],
   },
   {
@@ -217,7 +238,7 @@ export const toolsByCategory: ToolCategory[] = [
   },
   {
     name: 'Data',
-    components: [phoneParserAndFormatter, ibanValidatorAndParser],
+    components: [phoneParserAndFormatter, ibanValidatorAndParser, mockDataGenerator],
   },
 ];
 
