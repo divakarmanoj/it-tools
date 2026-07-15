@@ -103,6 +103,7 @@ import { tool as openapiViewer } from './openapi-viewer';
 import { tool as graphqlFormatter } from './graphql-formatter';
 import { tool as mockDataGenerator } from './mock-data-generator';
 import { tool as dockerfileLinter } from './dockerfile-linter';
+import { tool as qrCodeReader } from './qr-code-reader';
 
 export const toolsByCategory: ToolCategory[] = [
   {
@@ -173,7 +174,7 @@ export const toolsByCategory: ToolCategory[] = [
   },
   {
     name: 'Images and videos',
-    components: [qrCodeGenerator, wifiQrCodeGenerator, svgPlaceholderGenerator, cameraRecorder],
+    components: [qrCodeGenerator, qrCodeReader, wifiQrCodeGenerator, svgPlaceholderGenerator, cameraRecorder],
   },
   {
     name: 'Development',
